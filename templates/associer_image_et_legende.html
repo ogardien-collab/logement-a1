@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="./../static/style3.css"> <!-- feuille de style -->
+        <script src="./../static/jquery-3.6.0.min.js"></script> <!-- chargement de jquery -->
+    </head>
+
+    <body>
+        <header>
+            <div id="logo"><a href="./../activites_numeriques.html"></a></div>
+            <div id="titreAct">Associer les images avec leurs légendes</div>
+            <div id="menu">
+                <span>&#x2630;</span>
+                <div id="contentMenu">
+                    <ul>
+                        <li class="menuItem" id="item1"><a href="images_avec_legendes.html">Images avec leurs légendes</a></li>
+                        <li class="menuItem" id="item2"><a href="images_sans_legendes.html">Images sans leurs légendes</a></li>
+                        <li class="menuItem" id="item3"><a href="memory.html">Memory</a></li>
+                        <li class="menuItem" id="item4"><a href="trouver_la_bonne_legende.html">Trouver la bonne légende pour l'image</a></li>
+                        <li class="menuItem" id="item5"><a href="associer_image_et_legende.html">Associer les images avec leurs légendes</a></li>
+                        <li class="menuItem" id="item6"><a href="images_en_nuage.html">Série d'images en nuage</a></li>
+                        <li class="menuItem" id="item7"><a href="train_des_images.html">Train des images</a></li>
+                    </ul>    
+                </div>
+            </div>
+        </header>
+        <div id="container">
+            <div id="affichage_des_cartes">
+                <div id="imags">
+                    <div id="imag1" class="imag"></div>
+                    <div id="imag2" class="imag"></div>
+                    <div id="imag3" class="imag"></div>
+                    <div id="imag4" class="imag"></div>
+                    <div id="imag5" class="imag"></div>
+                </div>
+                <div id="emptys">
+                    <div id="empty1" class="empty dashedBorder"  ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div id="empty2" class="empty dashedBorder"  ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div id="empty3" class="empty dashedBorder"  ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div id="empty4" class="empty dashedBorder"  ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div id="empty5" class="empty dashedBorder"  ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                </div>
+                <div id="legds">
+                    <div id="legd1" class="legd dashedBorder" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div id="legd2" class="legd dashedBorder" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div id="legd3" class="legd dashedBorder" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div id="legd4" class="legd dashedBorder" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div id="legd5" class="legd dashedBorder" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                </div>
+            </div>
+            <div id="jouer_div"><button id="jouer">JOUER</button><button id="solution">SOLUTION</button></div>
+        </div>
+        <script src="./../static/functions4.js"></script> <!-- fichier des fonctions générales -->
+    </body>
+</html>

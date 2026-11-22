@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./../static/style.css"> <!-- feuille de style -->
+    <script src="./../static/jquery-3.6.0.min.js"></script> <!-- chargement de jquery -->
+</head>
+
+<body>
+    <header>
+        <div id="logo"><a href="./../activites_numeriques.html"></a></div>
+        <div id="titreAct">Images avec leurs légendes</div>
+        <div id="menu">
+            <span>&#x2630;</span>
+            <div id="contentMenu">
+                <ul>
+                    <li class="menuItem" id="item1"><a href="images_avec_legendes.html">Images avec leurs légendes</a></li>
+                    <li class="menuItem" id="item2"><a href="images_sans_legendes.html">Images sans leurs légendes</a></li>
+                    <li class="menuItem" id="item3"><a href="memory.html">Memory</a></li>
+                    <li class="menuItem" id="item4"><a href="trouver_la_bonne_legende.html">Trouver la bonne légende pour l'image</a></li>
+                    <li class="menuItem" id="item5"><a href="associer_image_et_legende.html">Associer les images avec leurs légendes</a></li>
+                    <li class="menuItem" id="item6"><a href="images_en_nuage.html">Série d'images en nuage</a></li>
+                    <li class="menuItem" id="item7"><a href="train_des_images.html">Train des images</a></li>
+                </ul>    
+            </div>
+        </div>
+    </header>
+    <div id="nb_img">
+        <div>
+            <input type="radio" id="1img" name="nb_img" value="1" class="nb_img" checked>
+            <label for="1img">1 carte</label>
+        </div>
+        <div><input type="radio" id="3img" name="nb_img" value="3" class="nb_img">
+            <label for="3img">3 cartes</label>
+        </div>
+        <div><input type="radio" id="5img" name="nb_img" value="5" class="nb_img">
+            <label for="5img">5 cartes</label>
+        </div>
+    </div>
+    <div id="container">
+        <div id="affichage_des_cartes"></div>
+        <div id="jouer_div"><button id="jouer">JOUER</button></div>
+    </div>
+    <script src="./../static/functions.js"></script> <!-- fichier des fonctions générales -->
+</body>
+
+</html>

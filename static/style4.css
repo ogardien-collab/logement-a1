@@ -1,0 +1,320 @@
+body{
+    margin: 0px;
+    height: calc(100vh - 100px);
+    width: calc(100vw - 100px);
+    padding: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    position: absolute;
+    height: 50px;
+    width: 100%;
+    top:0px;
+    left: 0px;
+    /* background: conic-gradient(from -90deg, rgba(0, 159, 227, 0.5),rgb(3, 82, 116, 0.5)); */
+    background-color: #009fe3;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+}
+    header>div{
+        height: 100%;
+    }
+        #logo{
+            width: 161px;
+            background-image: url("./logo.png");
+            background-size: auto 40px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+            #logo>a{
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                cursor: pointer;
+            }
+        #titreAct{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: xx-large;
+            font-style: italic;
+        }
+        #menu{
+            width: 50px;
+            text-align: end;
+        }
+        #menu>span{
+            font-size: 35px;
+            text-align: center;
+            color: white;
+            cursor: pointer;
+            margin-right: 5px;
+        }
+        #menu:hover{
+            font-weight:800 ;
+        }
+            #contentMenu{
+                display:none;
+                position: absolute;
+                right: 0px;
+                top:50px;
+                background-color: #009fe3;
+                border-top: 1px solid black;
+                text-align: left;
+                width: 300px;
+                z-index: 3;
+                height: 0px;
+                transition: height 1s ease-in-out;
+            }
+            #contentMenu>ul{
+                list-style-type: none;
+                margin: 0px;
+                padding: 0px;
+            }
+            #contentMenu>ul>li>a{
+                color: white;
+                text-decoration: none;
+                font-weight: 400;
+                text-shadow: 1px 1px #035274;
+                width: 100%;
+                display: inline-block;
+            }
+            #contentMenu>ul>li{
+                padding: 5px 15px;
+            }
+            #contentMenu>ul>li:hover{
+                background-color: #035274;
+            }
+        #menu:hover>#contentMenu{
+            display:block;
+            height: auto;
+            transition: height 1s ease-in-out;
+        }
+        #contentMenu:hover{
+            display: block;
+            opacity: 1;
+        }
+    #container{
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+        #choix{
+            position: absolute;
+            display: flex;
+            right: 15px;
+            font-size: small;
+        }
+            #choix input{
+                visibility: hidden;
+            }
+            #choix label{
+                background-color:#035274 ;
+                padding: 10px 20px;
+                cursor: pointer;
+                color: white;
+            }
+            #choix :checked + .verify{
+                box-shadow: 3px 3px #009fe3;
+            }
+        #affichage_des_cartes{
+            height: 90%;
+            width: 100%;
+            display: flex;
+            flex-direction: row-reverse;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-content: space-around;
+        }
+            .carte_glob{
+                max-width: 18%;
+                max-height: 33%;
+            }
+            .back{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .leg{
+                text-align: center;
+            }
+
+        #jouer_div{
+            height: 10%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+            #jouer{
+                font-size: xx-large;
+                border: none;
+                background-color: #009fe3;
+                padding: 10px 20px;
+                color: white;
+                cursor: pointer;
+            }
+            #jouer:hover{
+                box-shadow: 2px 2px #035274;
+            }
+
+        .wagon{
+            width: 18%;
+            height: auto;
+            border: 2px solid rgb(31, 31, 31);
+            border-radius: 15px 15px 0px 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            background-color: white;
+            visibility: hidden;
+        }
+        .wagon::after{
+            content:"";
+            position: absolute;
+            bottom:calc(-15% - 4px);
+            right: 5%;
+            border-radius: 50%;
+            width: 15%;
+            height: 15%;
+            border: 2px solid black;
+        }
+        .wagon::before{
+            content:"";
+            position: absolute;
+            bottom:calc(-15% - 4px);
+            left: 5%;
+            border-radius: 50%;
+            width: 15%;
+            height: 15%;
+            border: 2px solid black;
+        }
+        .wagon>img{
+            height: auto;
+            max-width: 90%;
+        }
+        #liant{
+            position: absolute;
+            top:50%;
+            width: 100%;
+            border: 1px solid black;
+            z-index: -2;
+        }
+        .lege{
+            position: absolute;
+            top: -30%;
+            visibility: hidden;
+            font-size: large;
+            text-align: center;
+        }
+        .visibleLegende{
+            visibility: visible !important;
+        }
+
+@media (orientation:portrait){
+    body{
+        margin: 0px;
+        height: calc(100vh - 50px);
+        width: calc(100vw - 50px);
+        padding: 25px;
+    }
+    #affichage_des_cartes{
+        height: 90%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-content: space-around;
+    }
+    .wagon{
+        width: auto;
+        height: 18%;
+        border: 2px solid rgb(31, 31, 31);
+        border-radius: 0px 15px 15px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        background-color: white;
+    }
+    .wagon::after{
+        content:"";
+        position: absolute;
+        left:calc(-15% - 4px);
+        top: 5%;
+        border-radius: 50%;
+        width: 15%;
+        height: 15%;
+        border: 2px solid black;
+    }
+    .wagon::before{
+        content:"";
+        position: absolute;
+        left:calc(-15% - 4px);
+        top: 5%;
+        border-radius: 50%;
+        width: 15%;
+        height: 15%;
+        border: 2px solid black;
+    }
+    .wagon>img{
+        max-height: 90%;
+        width: auto;
+    }
+    #liant{
+        position: absolute;
+        left:50%;
+        height: 90%;
+        top: 0px;
+        width: 0%;
+        border: 1px solid black;
+        z-index: -2;
+    }
+    #jouer_div{
+        height: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+        #jouer{
+            font-size: medium;
+            border: none;
+            background-color: #009fe3;
+            padding: 5px 20px;
+            color: white;
+            height: 95%;
+        }
+        #jouer:hover{
+            box-shadow: 2px 2px #035274;
+        }
+        #choix{
+            height: 10%;
+            width: 30%;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            left: 0px;
+            font-size: xx-small;
+        }
+        #choix label{
+            padding: 4px 8px;
+            cursor: pointer;
+            background-color: #035274;
+            color: white;
+        }
+        .lege{
+            position: absolute;
+            right: -110%;
+            top:50%;
+            transform: translateY(-50%);
+            visibility: hidden;
+            width: 100%;
+            text-align: center;
+        }
+}
